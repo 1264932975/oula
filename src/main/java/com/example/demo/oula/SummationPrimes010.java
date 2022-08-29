@@ -20,7 +20,7 @@ public class SummationPrimes010 {
                 }
             }
             if (b) {
-                sum = sum + temp;
+                sum += temp;
             }
         }
         Date end = new Date();
