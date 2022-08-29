@@ -16,7 +16,7 @@ public class St11Prime007 {
             temp += 2;//双数都能被2整除，一次跳过两个数
             boolean b = true;
             for (int i = 3; i*i <= temp ; i += 2) {
-                if (temp % i == 0 && temp / i != 0 ) {//是否被整除
+                if (temp % i == 0) {//是否被整除
                     b = false;
                     break;
                 }
