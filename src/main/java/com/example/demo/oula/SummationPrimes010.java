@@ -11,15 +11,14 @@ public class SummationPrimes010 {
         Date st = new Date();
         Long sum = 2l;
         for (int temp = 3; temp < 2000000; temp += 2) {
-            boolean b = true;
             int sqrt = (int) Math.sqrt(temp) + 1;
             for (int i = 3; i < sqrt; i += 2) {
                 if (temp % i == 0) {//是否被整除
-                    b = false;
+                    sqrt = 0;
                     break;
                 }
             }
-            if (b) {
+            if (sqrt>0) {
                 sum += temp;
             }
         }
