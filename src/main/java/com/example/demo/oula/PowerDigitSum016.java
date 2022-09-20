@@ -12,11 +12,11 @@ public class PowerDigitSum016 {
         Date st = new Date();
         BigInteger bigInteger = new BigInteger("2");
         for (int i = 1; i < 1000; i++) {
-            bigInteger = bigInteger.multiply(new BigInteger("2"));
+            bigInteger = bigInteger.multiply(new BigInteger("2"));//2^1000
         }
         String str = bigInteger.toString();
         long sum=0;
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {//按位取数
             int x = Integer.valueOf(str.substring(i, i + 1));
             sum+=x;
         }
