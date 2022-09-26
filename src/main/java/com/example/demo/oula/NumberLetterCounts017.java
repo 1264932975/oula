@@ -60,8 +60,6 @@ public class NumberLetterCounts017 {
                     stringBuilder.append("and");
                 }
                 if (temp < 100) {
-
-
                     if (temp > 20) {
                         stringBuilder.append(map.get(temp / 10 * 10) + map.get(temp % 10));
                     } else {//20以下特殊处理
