@@ -26,7 +26,7 @@ public class CountingDundays019 {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(begin);
         while (calendar.getTime().getTime() <= end.getTime()) {
-            if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
+            if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)//循环每月的1号判断是否是周一
                 count++;
             calendar.add(Calendar.MONTH, 1);
         }
