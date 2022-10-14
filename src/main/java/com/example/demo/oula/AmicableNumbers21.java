@@ -11,7 +11,7 @@ public class AmicableNumbers21 {
     public static String ol21() {
         long st = System.currentTimeMillis();
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 1; i < 10000; i++) {
+        for (int i = 1; i < 10000; i++) {//计算所有亲和数
             int temp = i / 2 + 1;
             int sum = 0;
             for (int j = 1; j < temp; j++) {
@@ -25,7 +25,7 @@ public class AmicableNumbers21 {
         for (int integer : map.keySet()) {
             if (map.containsKey(map.get(integer))) {
                 if (integer == map.get(map.get(integer)) && integer != map.get(integer)) {
-                    sum += integer;
+                    sum += integer;//亲和数累加
                 }
             }
         }
