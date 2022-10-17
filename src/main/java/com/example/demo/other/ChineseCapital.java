@@ -5,7 +5,11 @@ import java.util.Map;
 
 public class ChineseCapital {
     public static void main(String[] args) {
-        System.out.println(chineseCapital("10010001"));
+        long st=System.currentTimeMillis();
+        System.out.println("答案："+chineseCapital("10010001"));
+        long end=System.currentTimeMillis();
+        System.out.println("用时："+(end-st)+"ms");
+
     }
 
     public static String chineseCapital(String num) {
@@ -54,7 +58,7 @@ public class ChineseCapital {
                     if (b)
                         stringBuilder.append("零");
                     int dig = -(num.length() - i);
-                    if (dig < -5 && dig > -8 && !"0".equals(num.substring(i + 1, i + 2))) {
+                    if (dig < -5 && dig > -8 && !"0".equals(num.substring(i + 1, i + 2))) {//处理复数位数
                         stringBuilder.append(mapNum.get(Integer.valueOf(str))).append(mapNum.get(dig + 4));
                     } else {
                         stringBuilder.append(mapNum.get(Integer.valueOf(str))).append(mapNum.get(dig));
