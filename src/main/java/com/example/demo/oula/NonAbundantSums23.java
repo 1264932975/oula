@@ -12,7 +12,7 @@ public class NonAbundantSums23 {
     public static String ol23() {
         long st = System.currentTimeMillis();
         int max = 28124;
-        int[] b = new int[max];
+        int[] b = new int[max];//经过测试使用boolean比int慢
         int[] c = new int[max];
         for (int i = 2; i < max; i++) {//计算是否盈数并记录
             if (funByOl23(i) > i) b[i] = 1;
