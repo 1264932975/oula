@@ -54,7 +54,7 @@ public class ChineseCapital {
                     if (b)
                         stringBuilder.append("零");
                     int dig = -(num.length() - i);
-                    if (dig < -5 && dig > -8 && !num.substring(i + 1, i + 2).equals("0")) {
+                    if (dig < -5 && dig > -8 && !"0".equals(num.substring(i + 1, i + 2))) {
                         stringBuilder.append(mapNum.get(Integer.valueOf(str))).append(mapNum.get(dig + 4));
                     } else {
                         stringBuilder.append(mapNum.get(Integer.valueOf(str))).append(mapNum.get(dig));
