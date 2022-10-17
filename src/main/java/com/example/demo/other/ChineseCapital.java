@@ -34,14 +34,14 @@ public class ChineseCapital {
         StringBuilder stringBuilder = new StringBuilder("");
         int l = num.length() - 1;
         boolean b = false;
-        if (num.length() == 1) {
+        if (num.length() == 1) {//处理个位数
             stringBuilder = stringBuilder.append(mapNum.get(Integer.valueOf(num)));
             return stringBuilder.toString();
         }
         for (int i = 0; i < num.length(); i++) {
             String str = num.substring(i, i + 1);
             if (str.equals("0")) {
-                b = true;
+                b = true;//对是否有0做记录
             }
             if (i == l) {
                 if (!num.substring(i).equals("0")) {
