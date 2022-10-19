@@ -3,11 +3,19 @@ package com.example.demo.oula;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class AmicableNumbers21 {
     public static void main(String[] args) {
         System.out.println(ol21());
     }
 
+    /**
+     * @return java.lang.String
+     * @parameters []
+     * @author shield
+     * @date 2022/10/17 下午5:42
+     * @name ol21
+     */
     public static String ol21() {
         long st = System.currentTimeMillis();
         Map<Integer, Integer> map = new HashMap<>();
